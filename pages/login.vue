@@ -1,58 +1,58 @@
 <template>
-  <div class="min-h-screen flex items-center justify-center">
-    <div
-      class="max-w-7xl w-full p-8 bg-white shadow-lg rounded-lg border border-primary"
-    >
-      <h2 class="text-3xl font-bold text-primary text-center mb-6">
-        Welcome Back!
-      </h2>
-      <form class="space-y-6" @submit.prevent="handleFormSubmit">
-        <div>
-          <label for="email" class="block text-sm font-medium text-primary"
-            >Email</label
-          >
-          <input
-            type="text"
-            id="email"
-            name="email"
-            v-model="formData.email"
-            class="w-full px-4 py-3 rounded-lg border border-secondary focus:outline-none focus:ring focus:ring-primary transition duration-200"
-            :class="{ 'border-red-500': errors.email }"
-            placeholder="Enter your email"
-          />
-          <p v-if="errors.email" class="text-red-500 text-sm">
-            {{ errors.email }}
-          </p>
-        </div>
-        <div>
-          <label for="password" class="block text-sm font-medium text-primary"
-            >Password</label
-          >
-          <input
-            v-model="formData.password"
-            type="password"
-            id="password"
-            name="password"
-            class="w-full px-4 py-3 rounded-lg border border-secondary focus:outline-none focus:ring focus:ring-primary transition duration-200"
-            :class="{ 'border-red-500': errors.password }"
-            placeholder="Enter your password"
-          />
-          <p v-if="errors.password" class="text-red-500 text-sm">
-            {{ errors.password }}
-          </p>
-        </div>
-        <button
-          type="submit"
-          class="w-full bg-slate-950 text-white py-3 rounded-lg transition duration-300 shadow-md"
+  <div
+    class="max-w-md h-full max-h-[450px] mt-24 w-full p-8 bg-white shadow-lg rounded-lg border border-primary"
+  >
+    <h2 class="text-3xl font-bold text-primary text-center mb-6">
+      Welcome Back!
+    </h2>
+    <form class="space-y-6" @submit.prevent="handleFormSubmit">
+      <div>
+        <label for="email" class="block text-sm font-medium text-primary"
+          >Email</label
         >
-          Login
-        </button>
-      </form>
-      <p class="mt-4 text-center text-muted-foreground">
-        Don't have an account?
-        <NuxtLink to="/signup" class="text-accent hover:underline">Sign up</NuxtLink>
-      </p>
-    </div>
+        <input
+          type="text"
+          id="email"
+          name="email"
+          v-model="formData.email"
+          class="w-full px-4 py-3 rounded-lg border border-secondary focus:outline-none focus:ring focus:ring-primary transition duration-200"
+          :class="{ 'border-red-500': errors.email }"
+          placeholder="Enter your email"
+        />
+        <p v-if="errors.email" class="text-red-500 text-sm">
+          {{ errors.email }}
+        </p>
+      </div>
+      <div>
+        <label for="password" class="block text-sm font-medium text-primary"
+          >Password</label
+        >
+        <input
+          v-model="formData.password"
+          type="password"
+          id="password"
+          name="password"
+          class="w-full px-4 py-3 rounded-lg border border-secondary focus:outline-none focus:ring focus:ring-primary transition duration-200"
+          :class="{ 'border-red-500': errors.password }"
+          placeholder="Enter your password"
+        />
+        <p v-if="errors.password" class="text-red-500 text-sm">
+          {{ errors.password }}
+        </p>
+      </div>
+      <button
+        type="submit"
+        class="w-full bg-slate-950 text-white py-3 rounded-lg transition duration-300 shadow-md"
+      >
+        Login
+      </button>
+    </form>
+    <p class="mt-4 text-center text-muted-foreground">
+      Don't have an account?
+      <NuxtLink to="/signup" class="text-accent hover:underline"
+        >Sign up</NuxtLink
+      >
+    </p>
   </div>
 </template>
 

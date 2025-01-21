@@ -6,6 +6,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   serverHandlers: [
     { route: '/api', middleware: true, handler: '~/server/middleware/db.js' },
+    { route: '/api', middleware: true, handler: '~/server/api/index.js' },
   ],
 
 })

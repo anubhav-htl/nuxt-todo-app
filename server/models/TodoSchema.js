@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 
 const TodoSchema = new mongoose.Schema({
-  text: {
+  title: {
     type: String,
     required: true,
   },

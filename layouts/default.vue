@@ -1,10 +1,8 @@
 <template>
   <div class="min-h-screen flex flex-col">
     <NavBar />
-    <main class="flex-grow">
-      <!-- <div class="max-w-7xl"> -->
+    <main class="flex-grow flex  justify-center  ">
         <slot />
-      <!-- </div> -->
     </main>
     <Footer />
   </div>
